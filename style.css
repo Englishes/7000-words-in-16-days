@@ -1,0 +1,14 @@
+[data-text] {
+  white-space: pre-line;
+}
+[data-text].focus {
+  font-weight: bold;
+}
+[data-text].select::before {
+  content: '\A• ';
+}
+[data-text]::before,
+[data-text][data-refocus-count="2"]::before {
+  content: '\A◦ ';
+  font-size: 1.2rem;
+}
